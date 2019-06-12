@@ -2,4 +2,4 @@ pplications:
   - name: pcfJenkins
     path: target/pcfJenkins.jar
     buildpack: https://github.com/cloudfoundry/java-buildpack.git
-    memory:800m
+    memory: 800m
