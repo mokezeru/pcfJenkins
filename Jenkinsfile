@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Clone repo and Clean it') {
+        stage('Build') {
             steps {
                bat "mvn clean"
             }
@@ -13,7 +13,8 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                bat "mvn package"
+                bat "cf login -a api.run.pivotal.io -u 'mokemz24@gmail.com' -p '@MmZ119915$'"
+                bat "cf push"
             }
         }
     }
