@@ -19,7 +19,7 @@ pipeline {
         stage('cf push') {
             steps {
                 bat "cf login -a api.run.pivotal.io -u mokemz24@gmail.com -p @MmZ119915\$"
-                bat "cf push pcfJenkins -p /target/pcfJenkins.jar -b https://github.com/cloudfoundry/java-buildpack.git"
+                bat "cf push pcfJenkins -p target/pcfJenkins.jar -b https://github.com/cloudfoundry/java-buildpack.git"
             }
         }
     }
