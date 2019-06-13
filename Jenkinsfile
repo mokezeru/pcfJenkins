@@ -12,6 +12,11 @@ pipeline {
             }
         }
         stage('Deploy') {
+                    steps {
+                        bat "mvn package"
+                    }
+                }
+        stage('cf push') {
             steps {
                 bat "cf login -a api.run.pivotal.io -u mokemz24@gmail.com -p @MmZ119915\$"
                 bat "cf push pcfJenkins"
